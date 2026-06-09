@@ -23,7 +23,7 @@ export interface Product {
   image?: string; // URL de Cloudinary o ruta local
 }
 
-const CLD = "https://res.cloudinary.com/dvamlxoy7/image/upload/f_auto,q_auto";
+const CLD = "https://res.cloudinary.com/dvamlxoy7/image/upload";
 
 export const products: Product[] = [
   // Corporativo
