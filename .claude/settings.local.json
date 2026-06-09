@@ -14,7 +14,10 @@
       "Bash(del \"C:\\\\Users\\\\Diego\\\\OneDrive\\\\Escritorio\\\\WebIsantex\\\\.git\\\\index.lock\")",
       "Bash(rm /c/Users/Diego/OneDrive/Escritorio/WebIsantex/.git/index.lock && echo \"eliminado\" && git add . && git commit -m \"Initial commit — ISANTEX website\" 2>&1 | tail -6)",
       "Bash(git rm *)",
-      "Bash(git config *)"
+      "Bash(git config *)",
+      "Bash(git branch *)",
+      "Bash(git remote *)",
+      "Bash(git push *)"
     ]
   }
 }
