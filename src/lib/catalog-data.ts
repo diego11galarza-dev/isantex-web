@@ -20,7 +20,10 @@ export interface Product {
   nameEn: string;
   categoryEs: Category;
   categoryEn: CategoryEN;
+  image?: string; // URL de Cloudinary o ruta local
 }
+
+const CLD = "https://res.cloudinary.com/dvamlxoy7/image/upload/f_auto,q_auto";
 
 export const products: Product[] = [
   // Corporativo
@@ -31,7 +34,8 @@ export const products: Product[] = [
   // Industrial
   { id: 4, nameEs: "Overoles Industriales", nameEn: "Industrial Overalls", categoryEs: "Industrial", categoryEn: "Industrial" },
   { id: 5, nameEs: "Ropa de Trabajo Resistente", nameEn: "Heavy-Duty Workwear", categoryEs: "Industrial", categoryEn: "Industrial" },
-  { id: 6, nameEs: "Trajes de Seguridad", nameEn: "Safety Suits", categoryEs: "Industrial", categoryEn: "Industrial" },
+  { id: 6, nameEs: "Trajes de Seguridad", nameEn: "Safety Suits", categoryEs: "Industrial", categoryEn: "Industrial",
+    image: `${CLD}/Gemini_Generated_Image_im09t0im09t0im09` },
 
   // Médico/Salud
   { id: 7, nameEs: "Scrubs Médicos", nameEn: "Medical Scrubs", categoryEs: "Médico/Salud", categoryEn: "Medical/Health" },

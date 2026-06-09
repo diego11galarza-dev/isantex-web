@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { useLanguage } from "@/context/LanguageContext";
 import { products } from "@/lib/catalog-data";
 
@@ -112,8 +113,20 @@ export default function Catalog() {
               key={product.id}
               className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1 group"
             >
-              {/* Placeholder image — replace src with real image path */}
-              <ProductPlaceholder name={getProductName(product)} />
+              {/* Product image */}
+              {product.image ? (
+                <div className="relative w-full h-48 rounded-t-2xl overflow-hidden">
+                  <Image
+                    src={product.image}
+                    alt={getProductName(product)}
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-300"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                  />
+                </div>
+              ) : (
+                <ProductPlaceholder name={getProductName(product)} />
+              )}
 
               <div className="p-4">
                 {/* Category badge */}
