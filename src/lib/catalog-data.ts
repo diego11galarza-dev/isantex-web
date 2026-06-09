@@ -35,7 +35,7 @@ export const products: Product[] = [
   { id: 4, nameEs: "Overoles Industriales", nameEn: "Industrial Overalls", categoryEs: "Industrial", categoryEn: "Industrial" },
   { id: 5, nameEs: "Ropa de Trabajo Resistente", nameEn: "Heavy-Duty Workwear", categoryEs: "Industrial", categoryEn: "Industrial" },
   { id: 6, nameEs: "Trajes de Seguridad", nameEn: "Safety Suits", categoryEs: "Industrial", categoryEn: "Industrial",
-    image: `${CLD}/Gemini_Generated_Image_im09t0im09t0im09` },
+    image: "https://res.cloudinary.com/dvamlxoy7/image/upload/v1781045438/Gemini_Generated_Image_im09t0im09t0im09_pxnqfi.png" },
 
   // Médico/Salud
   { id: 7, nameEs: "Scrubs Médicos", nameEn: "Medical Scrubs", categoryEs: "Médico/Salud", categoryEn: "Medical/Health" },
