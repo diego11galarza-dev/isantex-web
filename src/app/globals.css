@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+:root {
+  --brand: #2B2FB8;
+  --sky: #7EC8E3;
+  --violet: #B39DDB;
+  --surface: #F5F6FF;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', ui-sans-serif, system-ui, sans-serif;
+  background-color: #ffffff;
+  color: #111827;
+}
+
+/* Smooth transitions on all interactive elements */
+a, button {
+  transition: all 0.2s ease;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  background: #2B2FB8;
+  border-radius: 3px;
+}
+
+/* Catalog filter active state */
+.filter-btn-active {
+  background-color: #2B2FB8;
+  color: #ffffff;
+}
+
+/* WhatsApp float button pulse */
+@keyframes wa-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.4); }
+  50% { box-shadow: 0 0 0 12px rgba(37, 211, 102, 0); }
+}
+
+.wa-float {
+  animation: wa-pulse 2s infinite;
+}
+
+/* Process line gradient */
+.process-connector {
+  background: linear-gradient(90deg, #7EC8E3, #B39DDB);
+}
+
+/* Section fade-in animation */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease-out forwards;
+}
