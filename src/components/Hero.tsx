@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useLanguage } from "@/context/LanguageContext";
 
 const WA_URL =
@@ -98,22 +99,51 @@ export default function Hero() {
                   <div className="w-3 h-3 rounded-full bg-[#B39DDB]" />
                   <div className="w-3 h-3 rounded-full bg-white/50" />
                 </div>
-                {/* Mockup grid of product cards */}
+                {/* Grid de productos destacados con imágenes reales */}
                 <div className="grid grid-cols-2 gap-4">
-                  {["Corporativo", "Industrial", "Médico", "Educativo"].map((cat, i) => (
-                    <div
-                      key={cat}
-                      className="bg-white/10 rounded-2xl p-4 border border-white/20"
+                  {[
+                    {
+                      cat: "Corporativo",
+                      label: "Chalecos Corporativos",
+                      img: "https://res.cloudinary.com/dvamlxoy7/image/upload/v1781125222/Chaleco_Corporativo_kxffxe.jpg",
+                    },
+                    {
+                      cat: "Industrial",
+                      label: "Trajes de Seguridad",
+                      img: "https://res.cloudinary.com/dvamlxoy7/image/upload/v1781125231/Polo_Reflectiva_wse3wi.png",
+                    },
+                    {
+                      cat: "Médico/Salud",
+                      label: "Batas de Laboratorio",
+                      img: "https://res.cloudinary.com/dvamlxoy7/image/upload/v1781125225/Chaqueta_Chef_bz2obv.jpg",
+                    },
+                    {
+                      cat: "Educativo",
+                      label: "Uniformes Escolares",
+                      img: "https://res.cloudinary.com/dvamlxoy7/image/upload/v1781125226/Chaqueta_Escolar_nct4iq.jpg",
+                    },
+                  ].map((item, i) => (
+                    <a
+                      key={item.cat}
+                      href="#catalogo"
+                      className="group bg-white/10 rounded-2xl overflow-hidden border border-white/20 hover:border-[#7EC8E3]/60 transition-all duration-300 hover:-translate-y-0.5"
                       style={{ animationDelay: `${i * 0.1}s` }}
                     >
-                      <div className="w-full h-20 rounded-xl bg-white/10 mb-3 flex items-center justify-center">
-                        <svg className="w-8 h-8 text-[#7EC8E3]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" />
-                        </svg>
+                      <div className="relative w-full h-24 overflow-hidden">
+                        <Image
+                          src={item.img}
+                          alt={item.label}
+                          fill
+                          className="object-cover group-hover:scale-105 transition-transform duration-300"
+                          sizes="180px"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
                       </div>
-                      <p className="text-white text-xs font-semibold">{cat}</p>
-                      <p className="text-white/50 text-xs mt-0.5">Ver productos →</p>
-                    </div>
+                      <div className="p-3">
+                        <p className="text-white text-xs font-bold leading-tight">{item.label}</p>
+                        <p className="text-[#7EC8E3] text-xs mt-0.5 group-hover:underline">Ver productos →</p>
+                      </div>
+                    </a>
                   ))}
                 </div>
                 <div className="mt-6 flex items-center justify-between">
