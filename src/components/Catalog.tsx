@@ -125,30 +125,23 @@ function ProductModal({
                 </div>
               )}
 
-              {/* Tallas */}
+              {/* Tallas (prendas) */}
               {specs.sizes && (
                 <div className="bg-[#F5F6FF] rounded-2xl p-4">
                   <p className="text-xs font-bold text-[#2B2FB8] uppercase tracking-wider mb-1.5">
-                    {lang === "es" ? "Tallas" : "Sizes"}
+                    {lang === "es" ? "Tallas disponibles" : "Available sizes"}
                   </p>
-                  <p className="text-sm font-semibold text-gray-800">{specs.sizes}</p>
+                  <p className="text-sm font-semibold text-gray-800 tracking-wide">{specs.sizes}</p>
                 </div>
               )}
 
-              {/* Composición */}
-              {(lang === "es" ? specs.compositionEs : specs.compositionEn) && (
+              {/* Medidas (artículos sin talla: banderas, cintas, etc.) */}
+              {specs.dimensions && (
                 <div className="bg-[#F5F6FF] rounded-2xl p-4">
-                  <p className="text-xs font-bold text-[#2B2FB8] uppercase tracking-wider mb-2">
-                    {lang === "es" ? "Composición" : "Composition"}
+                  <p className="text-xs font-bold text-[#2B2FB8] uppercase tracking-wider mb-1.5">
+                    {lang === "es" ? "Medidas" : "Dimensions"}
                   </p>
-                  <ul className="space-y-1.5">
-                    {(lang === "es" ? specs.compositionEs! : specs.compositionEn!).map((item, i) => (
-                      <li key={i} className="flex items-start gap-2 text-sm text-gray-700">
-                        <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-[#7EC8E3] flex-shrink-0" />
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
+                  <p className="text-sm font-semibold text-gray-800">{specs.dimensions}</p>
                 </div>
               )}
 

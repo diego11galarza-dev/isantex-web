@@ -15,12 +15,13 @@ export type CategoryEN =
   | "Special";
 
 export interface ProductSpecs {
-  sizes?: string;                // "36 - 38 - 40 - 42 - 44 - 46"
-  descriptionEs?: string[];      // viñetas descripción en español
-  descriptionEn?: string[];      // viñetas descripción en inglés
-  compositionEs?: string[];      // composición en español
-  compositionEn?: string[];      // composición en inglés
-  colors?: string;               // texto libre de colores disponibles
+  /** Tallas para prendas de vestir: "S - M - L - XL - XXL" */
+  sizes?: string;
+  /** Medidas para artículos sin talla (banderas, cintas, etc.): "90×150 cm" */
+  dimensions?: string;
+  descriptionEs?: string[];
+  descriptionEn?: string[];
+  colors?: string;
 }
 
 export interface Product {
@@ -82,26 +83,16 @@ export const products: Product[] = [
     specs: {
       sizes: "S - M - L - XL - XXL - XXXL",
       descriptionEs: [
-        "Reflectiva AAA mangas, pecho y espalda",
-        "Bordados personalizados mangas y espalda",
-        "Alta visibilidad certificada",
+        "Alta visibilidad con cintas reflectivas en mangas, pecho y espalda",
+        "Confeccionado para cumplir normas de seguridad industrial",
+        "Bordado o serigrafía personalizada con logo corporativo",
+        "Diseño ergonómico para uso prolongado en campo",
       ],
       descriptionEn: [
-        "AAA reflective strips on sleeves, chest and back",
-        "Custom embroidery on sleeves and back",
-        "Certified high visibility",
-      ],
-      compositionEs: [
-        "100% Poliéster",
-        "Peso 223g (+/- 13 g/m2)",
-        "+ Protección Solar / UV Protection",
-        "+ Control de Humedad / BREATHABLE",
-      ],
-      compositionEn: [
-        "100% Polyester",
-        "Weight 223g (+/- 13 g/m2)",
-        "+ Sun Protection / UV Protection",
-        "+ Moisture Control / BREATHABLE",
+        "High visibility with reflective strips on sleeves, chest and back",
+        "Manufactured to meet industrial safety standards",
+        "Custom embroidery or screen printing with corporate logo",
+        "Ergonomic design for extended field use",
       ],
       colors: "20+ colores Pantone disponibles",
     },
