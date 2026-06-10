@@ -79,7 +79,6 @@ export const products: Product[] = [
     nameEn: "Safety Suits",
     categoryEs: "Industrial",
     categoryEn: "Industrial",
-    image: "https://res.cloudinary.com/dvamlxoy7/image/upload/v1781045438/Gemini_Generated_Image_im09t0im09t0im09_pxnqfi.png",
     specs: {
       sizes: "S - M - L - XL - XXL - XXXL",
       descriptionEs: [
