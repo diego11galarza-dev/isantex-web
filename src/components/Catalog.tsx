@@ -132,6 +132,17 @@ function ProductModal({
                     {lang === "es" ? "Tallas disponibles" : "Available sizes"}
                   </p>
                   <p className="text-sm font-semibold text-gray-800 tracking-wide">{specs.sizes}</p>
+                  {/* Tallas especiales — siempre visible */}
+                  <div className="mt-2 flex items-center gap-2">
+                    <span className="inline-flex items-center gap-1 bg-[#2B2FB8]/10 text-[#2B2FB8] text-xs font-semibold px-2.5 py-1 rounded-full">
+                      ✦ {lang === "es" ? "Tallas Especiales" : "Special Sizes"}
+                    </span>
+                    <p className="text-xs text-gray-500">
+                      {lang === "es"
+                        ? "Fabricamos desde las más pequeñas hasta las más grandes"
+                        : "We manufacture from the smallest to the largest"}
+                    </p>
+                  </div>
                 </div>
               )}
 
